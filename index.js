@@ -1,3 +1,5 @@
+// index.js
+
 const math = require('mathjs');
 
 // Example usage of Math.js
