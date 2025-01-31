@@ -1,18 +1,12 @@
 // index.js
 
 const math = require('mathjs');
+const { addComplex, multiplyComplex } = require('./complex');
+const { differentiate, integrate } = require('./calculus');
+const { mean, std } = require('./statistics');
+const { transpose, invert } = require('./matrixTransformations');
 
-// Example usage of Math.js
-const a = math.matrix([[1, 2], [3, 4]]);
-const b = math.matrix([[5, 6], [7, 8]]);
-const result = math.add(a, b);
-
-console.log('Result of matrix addition:');
-console.log(result);
-
-// index.js
-const math = require('mathjs');
-
+// Function to add matrices with error handling
 function addMatrices(a, b) {
   try {
     return math.add(a, b);
@@ -22,19 +16,15 @@ function addMatrices(a, b) {
   }
 }
 
-const a = math.matrix([[1, 2], [3, 4]]);
-const b = math.matrix([[5, 6], [7, 8]]);
-const result = addMatrices(a, b);
+// Example usage of Math.js for matrix operations
+const matrixA = math.matrix([[1, 2], [3, 4]]);
+const matrixB = math.matrix([[5, 6], [7, 8]]);
+const matrixResult = addMatrices(matrixA, matrixB);
 
-if (result) {
+if (matrixResult) {
   console.log('Result of matrix addition:');
-  console.log(result);
+  console.log(matrixResult);
 }
-// index.js
-const { addComplex, multiplyComplex } = require('./complex');
-const { differentiate, integrate } = require('./calculus');
-const { mean, std } = require('./statistics');
-const { transpose, invert } = require('./matrixTransformations');
 
 // Example usage of complex number functions
 console.log(`Addition of complex numbers: ${addComplex('2 + 3i', '1 - 4i')}`);
